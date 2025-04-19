@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 1.6.0
+_src_path: gh:algorandfoundation/algokit-python-template
+author_email: mansimladdha@gmail.com
+author_name: mansi754
+contract_name: ip_tokens
+deployment_language: python
+preset_name: starter
+project_name: Ip_tokenization-contracts
+
