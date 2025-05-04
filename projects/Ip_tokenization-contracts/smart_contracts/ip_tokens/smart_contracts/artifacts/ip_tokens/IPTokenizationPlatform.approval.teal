@@ -1,0 +1,669 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 0 1 4 1000
+    bytecblock "assetid" "creator_account" "kyc_verified" "royalty_percent"
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txn NumAppArgs
+    bz main_after_if_else@14
+    pushbytess 0x878cbb3d 0x87368535 0xa3c5d1d5 0x6ce094bd 0x0cee9f75 0xafe237eb 0xd0e15146 0x7b4825a7 0x33b3499e // method "create_application(asset,uint64)void", method "tokenize_asset(pay)void", method "buy_ip_fraction(pay,uint64)void", method "atomic_swap(account,account,uint64)void", method "verify_kyc(account,bool)void", method "revoke_kyc(account)void", method "distribute_royalty(pay)void", method "connect_wallet()void", method "delete_application()void"
+    txna ApplicationArgs 0
+    match main_create_application_route@5 main_tokenize_asset_route@6 main_buy_ip_fraction_route@7 main_atomic_swap_route@8 main_verify_kyc_route@9 main_revoke_kyc_route@10 main_distribute_royalty_route@11 main_connect_wallet_route@12 main_delete_application_route@13
+
+main_after_if_else@14:
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    intc_0 // 0
+    return
+
+main_delete_application_route@13:
+    // smart_contracts/ip_tokens/contract.py:97-98
+    // # === Admin: Delete Application ===
+    // @abimethod(allow_actions=["DeleteApplication"])
+    txn OnCompletion
+    pushint 5 // DeleteApplication
+    ==
+    assert // OnCompletion is not DeleteApplication
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub delete_application
+    intc_1 // 1
+    return
+
+main_connect_wallet_route@12:
+    // smart_contracts/ip_tokens/contract.py:92-93
+    // # === Module 5: Wallet Connection (Ping) ===
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub connect_wallet
+    intc_1 // 1
+    return
+
+main_distribute_royalty_route@11:
+    // smart_contracts/ip_tokens/contract.py:78-79
+    // # === Module 4: Royalty Distribution ===
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_1 // pay
+    ==
+    assert // transaction type is pay
+    // smart_contracts/ip_tokens/contract.py:78-79
+    // # === Module 4: Royalty Distribution ===
+    // @abimethod()
+    callsub distribute_royalty
+    intc_1 // 1
+    return
+
+main_revoke_kyc_route@10:
+    // smart_contracts/ip_tokens/contract.py:72-73
+    // # === Module 3: Legal Compliance: Revoke KYC ===
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txnas Accounts
+    // smart_contracts/ip_tokens/contract.py:72-73
+    // # === Module 3: Legal Compliance: Revoke KYC ===
+    // @abimethod()
+    callsub revoke_kyc
+    intc_1 // 1
+    return
+
+main_verify_kyc_route@9:
+    // smart_contracts/ip_tokens/contract.py:66-67
+    // # === Module 3: Legal Compliance: Verify KYC ===
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txnas Accounts
+    txna ApplicationArgs 2
+    intc_0 // 0
+    getbit
+    // smart_contracts/ip_tokens/contract.py:66-67
+    // # === Module 3: Legal Compliance: Verify KYC ===
+    // @abimethod()
+    callsub verify_kyc
+    intc_1 // 1
+    return
+
+main_atomic_swap_route@8:
+    // smart_contracts/ip_tokens/contract.py:50-51
+    // # === Module 2: Marketplace: Atomic Swap ===
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txnas Accounts
+    txna ApplicationArgs 2
+    btoi
+    txnas Accounts
+    txna ApplicationArgs 3
+    btoi
+    // smart_contracts/ip_tokens/contract.py:50-51
+    // # === Module 2: Marketplace: Atomic Swap ===
+    // @abimethod()
+    callsub atomic_swap
+    intc_1 // 1
+    return
+
+main_buy_ip_fraction_route@7:
+    // smart_contracts/ip_tokens/contract.py:36-37
+    // # === Module 2: Marketplace: Buy Fraction ===
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_1 // pay
+    ==
+    assert // transaction type is pay
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/ip_tokens/contract.py:36-37
+    // # === Module 2: Marketplace: Buy Fraction ===
+    // @abimethod()
+    callsub buy_ip_fraction
+    intc_1 // 1
+    return
+
+main_tokenize_asset_route@6:
+    // smart_contracts/ip_tokens/contract.py:21-22
+    // # === Module 1: Tokenize IP Asset ===
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_1 // pay
+    ==
+    assert // transaction type is pay
+    // smart_contracts/ip_tokens/contract.py:21-22
+    // # === Module 1: Tokenize IP Asset ===
+    // @abimethod()
+    callsub tokenize_asset
+    intc_1 // 1
+    return
+
+main_create_application_route@5:
+    // smart_contracts/ip_tokens/contract.py:14-15
+    // # === Create Application ===
+    // @abimethod(allow_actions=["NoOp"], create="require")
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    // smart_contracts/ip_tokens/contract.py:4
+    // class IPTokenizationPlatform(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txnas Assets
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/ip_tokens/contract.py:14-15
+    // # === Create Application ===
+    // @abimethod(allow_actions=["NoOp"], create="require")
+    callsub create_application
+    intc_1 // 1
+    return
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.create_application(asset_id: uint64, royalty_percent: uint64) -> void:
+create_application:
+    // smart_contracts/ip_tokens/contract.py:14-16
+    // # === Create Application ===
+    // @abimethod(allow_actions=["NoOp"], create="require")
+    // def create_application(self, asset_id: Asset, royalty_percent: UInt64) -> None:
+    proto 2 0
+    // smart_contracts/ip_tokens/contract.py:17
+    // self.assetid = asset_id.id
+    bytec_0 // "assetid"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/ip_tokens/contract.py:18
+    // self.creator_account = Txn.sender
+    bytec_1 // "creator_account"
+    txn Sender
+    app_global_put
+    // smart_contracts/ip_tokens/contract.py:19
+    // self.royalty_percent = royalty_percent
+    bytec_3 // "royalty_percent"
+    frame_dig -1
+    app_global_put
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.tokenize_asset(mbrpay: uint64) -> void:
+tokenize_asset:
+    // smart_contracts/ip_tokens/contract.py:21-23
+    // # === Module 1: Tokenize IP Asset ===
+    // @abimethod()
+    // def tokenize_asset(self, mbrpay: gtxn.PaymentTransaction) -> None:
+    proto 1 0
+    // smart_contracts/ip_tokens/contract.py:24
+    // assert Txn.sender == self.creator_account
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "creator_account"
+    app_global_get_ex
+    assert // check self.creator_account exists
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:25
+    // assert not Global.current_application_address.is_opted_in(Asset(self.assetid))
+    global CurrentApplicationAddress
+    intc_0 // 0
+    bytec_0 // "assetid"
+    app_global_get_ex
+    assert // check self.assetid exists
+    asset_holding_get AssetBalance
+    bury 1
+    !
+    assert
+    // smart_contracts/ip_tokens/contract.py:27
+    // assert mbrpay.receiver == Global.current_application_address
+    frame_dig -1
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:28
+    // assert mbrpay.amount == Global.min_balance + Global.asset_opt_in_min_balance
+    frame_dig -1
+    gtxns Amount
+    global MinBalance
+    global AssetOptInMinBalance
+    +
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:30-34
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=Global.current_application_address,
+    //     asset_amount=0,
+    // ).submit()
+    itxn_begin
+    // smart_contracts/ip_tokens/contract.py:31
+    // xfer_asset=self.assetid,
+    intc_0 // 0
+    bytec_0 // "assetid"
+    app_global_get_ex
+    assert // check self.assetid exists
+    // smart_contracts/ip_tokens/contract.py:32
+    // asset_receiver=Global.current_application_address,
+    global CurrentApplicationAddress
+    // smart_contracts/ip_tokens/contract.py:33
+    // asset_amount=0,
+    intc_0 // 0
+    itxn_field AssetAmount
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/ip_tokens/contract.py:30
+    // itxn.AssetTransfer(
+    intc_2 // axfer
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/ip_tokens/contract.py:30-34
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=Global.current_application_address,
+    //     asset_amount=0,
+    // ).submit()
+    itxn_submit
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.buy_ip_fraction(buyer_payment: uint64, fraction_amount: uint64) -> void:
+buy_ip_fraction:
+    // smart_contracts/ip_tokens/contract.py:36-38
+    // # === Module 2: Marketplace: Buy Fraction ===
+    // @abimethod()
+    // def buy_ip_fraction(self, buyer_payment: gtxn.PaymentTransaction, fraction_amount: UInt64) -> None:
+    proto 2 0
+    // smart_contracts/ip_tokens/contract.py:39
+    // assert self.kyc_verified.get(Txn.sender, default=False)
+    bytec_2 // "kyc_verified"
+    txn Sender
+    concat
+    box_get
+    swap
+    btoi
+    intc_0 // 0
+    swap
+    uncover 2
+    select
+    assert
+    // smart_contracts/ip_tokens/contract.py:40
+    // assert buyer_payment.receiver == Global.current_application_address
+    frame_dig -2
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:41
+    // assert buyer_payment.amount > 0
+    frame_dig -2
+    gtxns Amount
+    assert
+    // smart_contracts/ip_tokens/contract.py:42
+    // assert fraction_amount > 0
+    frame_dig -1
+    assert
+    // smart_contracts/ip_tokens/contract.py:44-48
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=Txn.sender,
+    //     asset_amount=fraction_amount,
+    // ).submit()
+    itxn_begin
+    // smart_contracts/ip_tokens/contract.py:45
+    // xfer_asset=self.assetid,
+    intc_0 // 0
+    bytec_0 // "assetid"
+    app_global_get_ex
+    assert // check self.assetid exists
+    // smart_contracts/ip_tokens/contract.py:46
+    // asset_receiver=Txn.sender,
+    txn Sender
+    frame_dig -1
+    itxn_field AssetAmount
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/ip_tokens/contract.py:44
+    // itxn.AssetTransfer(
+    intc_2 // axfer
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/ip_tokens/contract.py:44-48
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=Txn.sender,
+    //     asset_amount=fraction_amount,
+    // ).submit()
+    itxn_submit
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.atomic_swap(buyer: bytes, seller: bytes, amount: uint64) -> void:
+atomic_swap:
+    // smart_contracts/ip_tokens/contract.py:50-52
+    // # === Module 2: Marketplace: Atomic Swap ===
+    // @abimethod()
+    // def atomic_swap(self, buyer: Account, seller: Account, amount: UInt64) -> None:
+    proto 3 0
+    // smart_contracts/ip_tokens/contract.py:53
+    // assert self.assetid != UInt64(0)
+    intc_0 // 0
+    bytec_0 // "assetid"
+    app_global_get_ex
+    assert // check self.assetid exists
+    assert
+    // smart_contracts/ip_tokens/contract.py:54
+    // assert amount > 0
+    frame_dig -1
+    assert
+    // smart_contracts/ip_tokens/contract.py:55
+    // assert self.kyc_verified.get(buyer, default=False)
+    bytec_2 // "kyc_verified"
+    frame_dig -3
+    concat
+    box_get
+    swap
+    btoi
+    intc_0 // 0
+    swap
+    uncover 2
+    select
+    assert
+    // smart_contracts/ip_tokens/contract.py:56
+    // assert self.kyc_verified.get(seller, default=False)
+    bytec_2 // "kyc_verified"
+    frame_dig -2
+    concat
+    box_get
+    swap
+    btoi
+    intc_0 // 0
+    swap
+    uncover 2
+    select
+    assert
+    // smart_contracts/ip_tokens/contract.py:58-64
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=buyer,
+    //     asset_amount=amount,
+    //     sender=seller,
+    //     fee=1_000,
+    // ).submit()
+    itxn_begin
+    // smart_contracts/ip_tokens/contract.py:59
+    // xfer_asset=self.assetid,
+    intc_0 // 0
+    bytec_0 // "assetid"
+    app_global_get_ex
+    assert // check self.assetid exists
+    frame_dig -2
+    itxn_field Sender
+    frame_dig -1
+    itxn_field AssetAmount
+    frame_dig -3
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/ip_tokens/contract.py:58
+    // itxn.AssetTransfer(
+    intc_2 // axfer
+    itxn_field TypeEnum
+    // smart_contracts/ip_tokens/contract.py:63
+    // fee=1_000,
+    intc_3 // 1000
+    itxn_field Fee
+    // smart_contracts/ip_tokens/contract.py:58-64
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=buyer,
+    //     asset_amount=amount,
+    //     sender=seller,
+    //     fee=1_000,
+    // ).submit()
+    itxn_submit
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.verify_kyc(user: bytes, is_verified: uint64) -> void:
+verify_kyc:
+    // smart_contracts/ip_tokens/contract.py:66-68
+    // # === Module 3: Legal Compliance: Verify KYC ===
+    // @abimethod()
+    // def verify_kyc(self, user: Account, is_verified: bool) -> None:
+    proto 2 0
+    // smart_contracts/ip_tokens/contract.py:69
+    // assert Txn.sender == self.creator_account
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "creator_account"
+    app_global_get_ex
+    assert // check self.creator_account exists
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:70
+    // self.kyc_verified[user] = is_verified
+    bytec_2 // "kyc_verified"
+    frame_dig -2
+    concat
+    frame_dig -1
+    itob
+    box_put
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.revoke_kyc(user: bytes) -> void:
+revoke_kyc:
+    // smart_contracts/ip_tokens/contract.py:72-74
+    // # === Module 3: Legal Compliance: Revoke KYC ===
+    // @abimethod()
+    // def revoke_kyc(self, user: Account) -> None:
+    proto 1 0
+    // smart_contracts/ip_tokens/contract.py:75
+    // assert Txn.sender == self.creator_account
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "creator_account"
+    app_global_get_ex
+    assert // check self.creator_account exists
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:76
+    // self.kyc_verified[user] = False
+    bytec_2 // "kyc_verified"
+    frame_dig -1
+    concat
+    intc_0 // 0
+    itob
+    box_put
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.distribute_royalty(usage_payment: uint64) -> void:
+distribute_royalty:
+    // smart_contracts/ip_tokens/contract.py:78-80
+    // # === Module 4: Royalty Distribution ===
+    // @abimethod()
+    // def distribute_royalty(self, usage_payment: gtxn.PaymentTransaction) -> None:
+    proto 1 0
+    // smart_contracts/ip_tokens/contract.py:81
+    // assert usage_payment.receiver == Global.current_application_address
+    frame_dig -1
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:82
+    // assert usage_payment.amount > 0
+    frame_dig -1
+    gtxns Amount
+    dup
+    assert
+    // smart_contracts/ip_tokens/contract.py:84
+    // royalty_fee = (usage_payment.amount * self.royalty_percent) // 100
+    intc_0 // 0
+    bytec_3 // "royalty_percent"
+    app_global_get_ex
+    assert // check self.royalty_percent exists
+    *
+    pushint 100 // 100
+    /
+    // smart_contracts/ip_tokens/contract.py:86-90
+    // itxn.Payment(
+    //     receiver=self.creator_account,
+    //     amount=royalty_fee,
+    //     fee=1_000,
+    // ).submit()
+    itxn_begin
+    // smart_contracts/ip_tokens/contract.py:87
+    // receiver=self.creator_account,
+    intc_0 // 0
+    bytec_1 // "creator_account"
+    app_global_get_ex
+    assert // check self.creator_account exists
+    itxn_field Receiver
+    itxn_field Amount
+    // smart_contracts/ip_tokens/contract.py:86
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    // smart_contracts/ip_tokens/contract.py:89
+    // fee=1_000,
+    intc_3 // 1000
+    itxn_field Fee
+    // smart_contracts/ip_tokens/contract.py:86-90
+    // itxn.Payment(
+    //     receiver=self.creator_account,
+    //     amount=royalty_fee,
+    //     fee=1_000,
+    // ).submit()
+    itxn_submit
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.connect_wallet() -> void:
+connect_wallet:
+    // smart_contracts/ip_tokens/contract.py:95
+    // assert Txn.sender != Global.zero_address
+    txn Sender
+    global ZeroAddress
+    !=
+    assert
+    retsub
+
+
+// smart_contracts.ip_tokens.contract.IPTokenizationPlatform.delete_application() -> void:
+delete_application:
+    // smart_contracts/ip_tokens/contract.py:100
+    // assert Txn.sender == self.creator_account
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "creator_account"
+    app_global_get_ex
+    assert // check self.creator_account exists
+    ==
+    assert
+    // smart_contracts/ip_tokens/contract.py:102-107
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=self.creator_account,
+    //     asset_amount=0,
+    //     fee=1_000,
+    // ).submit()
+    itxn_begin
+    // smart_contracts/ip_tokens/contract.py:103
+    // xfer_asset=self.assetid,
+    intc_0 // 0
+    bytec_0 // "assetid"
+    app_global_get_ex
+    assert // check self.assetid exists
+    // smart_contracts/ip_tokens/contract.py:104
+    // asset_receiver=self.creator_account,
+    intc_0 // 0
+    bytec_1 // "creator_account"
+    app_global_get_ex
+    assert // check self.creator_account exists
+    // smart_contracts/ip_tokens/contract.py:105
+    // asset_amount=0,
+    intc_0 // 0
+    itxn_field AssetAmount
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // smart_contracts/ip_tokens/contract.py:102
+    // itxn.AssetTransfer(
+    intc_2 // axfer
+    itxn_field TypeEnum
+    // smart_contracts/ip_tokens/contract.py:106
+    // fee=1_000,
+    intc_3 // 1000
+    itxn_field Fee
+    // smart_contracts/ip_tokens/contract.py:102-107
+    // itxn.AssetTransfer(
+    //     xfer_asset=self.assetid,
+    //     asset_receiver=self.creator_account,
+    //     asset_amount=0,
+    //     fee=1_000,
+    // ).submit()
+    itxn_submit
+    retsub

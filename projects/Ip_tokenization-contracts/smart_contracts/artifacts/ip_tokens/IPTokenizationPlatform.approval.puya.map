@@ -1,0 +1,2977 @@
+{
+  "version": 3,
+  "sources": [
+    "../../ip_tokens/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAGA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;AAAA;;AA8FK;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAdA;;AAAA;AAAA;AAAA;;AAAA;AA3EL;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AA2EK;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AArEL;;;AAAA;AAAA;;AAqEK;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AA/DL;;;AAAA;AAAA;;AAAA;;;;AAAA;AA+DK;;;AAAA;;AAhBA;;AAAA;AAAA;AAAA;;AAAA;AA/CL;;;AAAA;AAAA;;AAAA;;;AAAA;AAAA;;AAAA;;;AAAA;AA+CK;;;AAAA;;AAdA;;AAAA;AAAA;AAAA;;AAAA;AAjCL;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAiCK;;;AAAA;;AAfA;;AAAA;AAAA;AAAA;;AAAA;AAlBL;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAkBK;;;AAAA;;AAPA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAXL;;;AAAA;AAAA;;AAAA;;;AAAA;AAWK;;;AAAA;;AAAL;;;AAEQ;AAAA;;AAAA;AACA;AAAuB;;AAAvB;AACA;AAAA;;AAAA;;AAGR;;;AAEe;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACW;;AAAqD;AAAA;AAAA;AAAA;AAArD;;AAAA;;AAAJ;AAAP;AAEO;;AAAA;;AAAmB;;AAAnB;AAAP;AACO;;AAAA;;AAAiB;;AAAqB;;AAArB;AAAjB;AAAP;AAEA;AACe;AAAA;AAAA;AAAA;AACI;;AACF;;;;;;;AAHjB;;;AAAA;;;AAAA;;AAOR;;;AAEe;AAAsB;;AAAtB;AAAA;AAAA;AAAA;AAA0C;AAA1C;AAAA;;AAAA;AAAP;AACO;;AAAA;;AAA0B;;AAA1B;AAAP;AACO;;AAAA;;AAAP;AACA;;AAAA;AAEA;AACe;AAAA;AAAA;AAAA;AACI;;;;;;;;;;AAFnB;;;AAAA;;;AAAA;;AAOR;;;AAEe;AAAA;AAAA;AAAA;AAAP;AACA;;AAAA;AACO;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAqC;AAArC;AAAA;;AAAA;AAAP;AACO;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAsC;AAAtC;AAAA;;AAAA;AAAP;AAEA;AACe;AAAA;AAAA;AAAA;;;;;;;;;;;;;;;AADf;;;AAKQ;;;AALR;;AASR;;;AAEe;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAGR;;;AAEe;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACA;AAAA;;AAAA;AAA0B;AAA1B;AAAA;;AAGR;;;AAEe;;AAAA;;AAA0B;;AAA1B;AAAP;AACO;;AAAA;;AAAP;AAAA;AAEsC;AAAA;AAAA;AAAA;AAAvB;AAAgD;;AAAjD;AAEd;AACa;AAAA;AAAA;AAAA;;;;;AADb;;;AAGQ;;;AAHR;;AASO;;AAAc;;AAAd;AAAP;;AAKO;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AAEA;AACe;AAAA;AAAA;AAAA;AACI;AAAA;AAAA;AAAA;AACF;;;;;;;AAHjB;;;AAIQ;;;AAJR;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.__algopy_entrypoint_with_init",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1 4 1000"
+    },
+    "8": {
+      "op": "bytecblock \"assetid\" \"creator_account\" \"kyc_verified\" \"royalty_percent\""
+    },
+    "63": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "65": {
+      "op": "bz main_after_if_else@14",
+      "stack_out": []
+    },
+    "68": {
+      "op": "pushbytess 0x878cbb3d 0x87368535 0xa3c5d1d5 0x6ce094bd 0x0cee9f75 0xafe237eb 0xd0e15146 0x7b4825a7 0x33b3499e // method \"create_application(asset,uint64)void\", method \"tokenize_asset(pay)void\", method \"buy_ip_fraction(pay,uint64)void\", method \"atomic_swap(account,account,uint64)void\", method \"verify_kyc(account,bool)void\", method \"revoke_kyc(account)void\", method \"distribute_royalty(pay)void\", method \"connect_wallet()void\", method \"delete_application()void\"",
+      "defined_out": [
+        "Method(atomic_swap(account,account,uint64)void)",
+        "Method(buy_ip_fraction(pay,uint64)void)",
+        "Method(connect_wallet()void)",
+        "Method(create_application(asset,uint64)void)",
+        "Method(delete_application()void)",
+        "Method(distribute_royalty(pay)void)",
+        "Method(revoke_kyc(account)void)",
+        "Method(tokenize_asset(pay)void)",
+        "Method(verify_kyc(account,bool)void)"
+      ],
+      "stack_out": [
+        "Method(create_application(asset,uint64)void)",
+        "Method(tokenize_asset(pay)void)",
+        "Method(buy_ip_fraction(pay,uint64)void)",
+        "Method(atomic_swap(account,account,uint64)void)",
+        "Method(verify_kyc(account,bool)void)",
+        "Method(revoke_kyc(account)void)",
+        "Method(distribute_royalty(pay)void)",
+        "Method(connect_wallet()void)",
+        "Method(delete_application()void)"
+      ]
+    },
+    "115": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(atomic_swap(account,account,uint64)void)",
+        "Method(buy_ip_fraction(pay,uint64)void)",
+        "Method(connect_wallet()void)",
+        "Method(create_application(asset,uint64)void)",
+        "Method(delete_application()void)",
+        "Method(distribute_royalty(pay)void)",
+        "Method(revoke_kyc(account)void)",
+        "Method(tokenize_asset(pay)void)",
+        "Method(verify_kyc(account,bool)void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(create_application(asset,uint64)void)",
+        "Method(tokenize_asset(pay)void)",
+        "Method(buy_ip_fraction(pay,uint64)void)",
+        "Method(atomic_swap(account,account,uint64)void)",
+        "Method(verify_kyc(account,bool)void)",
+        "Method(revoke_kyc(account)void)",
+        "Method(distribute_royalty(pay)void)",
+        "Method(connect_wallet()void)",
+        "Method(delete_application()void)",
+        "tmp%2#0"
+      ]
+    },
+    "118": {
+      "op": "match main_create_application_route@5 main_tokenize_asset_route@6 main_buy_ip_fraction_route@7 main_atomic_swap_route@8 main_verify_kyc_route@9 main_revoke_kyc_route@10 main_distribute_royalty_route@11 main_connect_wallet_route@12 main_delete_application_route@13",
+      "stack_out": []
+    },
+    "138": {
+      "block": "main_after_if_else@14",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "139": {
+      "op": "return",
+      "stack_out": []
+    },
+    "140": {
+      "block": "main_delete_application_route@13",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%52#0"
+      ],
+      "stack_out": [
+        "tmp%52#0"
+      ]
+    },
+    "142": {
+      "op": "pushint 5 // DeleteApplication",
+      "defined_out": [
+        "DeleteApplication",
+        "tmp%52#0"
+      ],
+      "stack_out": [
+        "tmp%52#0",
+        "DeleteApplication"
+      ]
+    },
+    "144": {
+      "op": "==",
+      "defined_out": [
+        "tmp%53#0"
+      ],
+      "stack_out": [
+        "tmp%53#0"
+      ]
+    },
+    "145": {
+      "error": "OnCompletion is not DeleteApplication",
+      "op": "assert // OnCompletion is not DeleteApplication",
+      "stack_out": []
+    },
+    "146": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%54#0"
+      ],
+      "stack_out": [
+        "tmp%54#0"
+      ]
+    },
+    "148": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "149": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.delete_application",
+      "op": "callsub delete_application"
+    },
+    "152": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "153": {
+      "op": "return",
+      "stack_out": []
+    },
+    "154": {
+      "block": "main_connect_wallet_route@12",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "tmp%48#0"
+      ]
+    },
+    "156": {
+      "op": "!",
+      "defined_out": [
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "157": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "158": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%50#0"
+      ],
+      "stack_out": [
+        "tmp%50#0"
+      ]
+    },
+    "160": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "161": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.connect_wallet",
+      "op": "callsub connect_wallet"
+    },
+    "164": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "165": {
+      "op": "return",
+      "stack_out": []
+    },
+    "166": {
+      "block": "main_distribute_royalty_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%43#0"
+      ],
+      "stack_out": [
+        "tmp%43#0"
+      ]
+    },
+    "168": {
+      "op": "!",
+      "defined_out": [
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0"
+      ]
+    },
+    "169": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "170": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%45#0"
+      ],
+      "stack_out": [
+        "tmp%45#0"
+      ]
+    },
+    "172": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "173": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%47#0"
+      ],
+      "stack_out": [
+        "tmp%47#0"
+      ]
+    },
+    "175": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%47#0"
+      ],
+      "stack_out": [
+        "tmp%47#0",
+        "1"
+      ]
+    },
+    "176": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%2#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%2#0"
+      ]
+    },
+    "177": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%2#0",
+        "gtxn_idx%2#0 (copy)"
+      ],
+      "stack_out": [
+        "gtxn_idx%2#0",
+        "gtxn_idx%2#0 (copy)"
+      ]
+    },
+    "178": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%2#0",
+        "gtxn_type%2#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%2#0",
+        "gtxn_type%2#0"
+      ]
+    },
+    "180": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_idx%2#0",
+        "gtxn_type%2#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_idx%2#0",
+        "gtxn_type%2#0",
+        "pay"
+      ]
+    },
+    "181": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%2#0",
+        "gtxn_type_matches%2#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%2#0",
+        "gtxn_type_matches%2#0"
+      ]
+    },
+    "182": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "gtxn_idx%2#0"
+      ]
+    },
+    "183": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.distribute_royalty",
+      "op": "callsub distribute_royalty",
+      "stack_out": []
+    },
+    "186": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "187": {
+      "op": "return",
+      "stack_out": []
+    },
+    "188": {
+      "block": "main_revoke_kyc_route@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%37#0"
+      ]
+    },
+    "190": {
+      "op": "!",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "191": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "192": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "194": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "195": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[1]%5#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[1]%5#0"
+      ]
+    },
+    "198": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0"
+      ]
+    },
+    "199": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%42#0"
+      ]
+    },
+    "201": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.revoke_kyc",
+      "op": "callsub revoke_kyc",
+      "stack_out": []
+    },
+    "204": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "205": {
+      "op": "return",
+      "stack_out": []
+    },
+    "206": {
+      "block": "main_verify_kyc_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "208": {
+      "op": "!",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "209": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "210": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "212": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "213": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[1]%3#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[1]%3#0"
+      ]
+    },
+    "216": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%34#0"
+      ]
+    },
+    "217": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "219": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[1]%4#0",
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "reinterpret_bytes[1]%4#0"
+      ]
+    },
+    "222": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "reinterpret_bytes[1]%4#0",
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "reinterpret_bytes[1]%4#0",
+        "0"
+      ]
+    },
+    "223": {
+      "op": "getbit",
+      "defined_out": [
+        "tmp%35#0",
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "tmp%36#0"
+      ]
+    },
+    "224": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.verify_kyc",
+      "op": "callsub verify_kyc",
+      "stack_out": []
+    },
+    "227": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "228": {
+      "op": "return",
+      "stack_out": []
+    },
+    "229": {
+      "block": "main_atomic_swap_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "231": {
+      "op": "!",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "232": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "233": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "235": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "236": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[1]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[1]%1#0"
+      ]
+    },
+    "239": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "240": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "242": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[1]%2#0",
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "reinterpret_bytes[1]%2#0"
+      ]
+    },
+    "245": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%26#0",
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "tmp%27#0"
+      ]
+    },
+    "246": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%26#0",
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "tmp%28#0"
+      ]
+    },
+    "248": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "reinterpret_bytes[8]%2#0",
+        "tmp%26#0",
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "tmp%28#0",
+        "reinterpret_bytes[8]%2#0"
+      ]
+    },
+    "251": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%26#0",
+        "tmp%28#0",
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "tmp%28#0",
+        "tmp%29#0"
+      ]
+    },
+    "252": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.atomic_swap",
+      "op": "callsub atomic_swap",
+      "stack_out": []
+    },
+    "255": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "256": {
+      "op": "return",
+      "stack_out": []
+    },
+    "257": {
+      "block": "main_buy_ip_fraction_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "259": {
+      "op": "!",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "260": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "261": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "263": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "264": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "266": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0",
+        "1"
+      ]
+    },
+    "267": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%1#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0"
+      ]
+    },
+    "268": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_idx%1#0 (copy)"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_idx%1#0 (copy)"
+      ]
+    },
+    "269": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0"
+      ]
+    },
+    "271": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0",
+        "pay"
+      ]
+    },
+    "272": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type_matches%1#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type_matches%1#0"
+      ]
+    },
+    "273": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "gtxn_idx%1#0"
+      ]
+    },
+    "274": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "reinterpret_bytes[8]%1#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "reinterpret_bytes[8]%1#0"
+      ]
+    },
+    "277": {
+      "op": "btoi",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "tmp%20#0"
+      ]
+    },
+    "278": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.buy_ip_fraction",
+      "op": "callsub buy_ip_fraction",
+      "stack_out": []
+    },
+    "281": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "282": {
+      "op": "return",
+      "stack_out": []
+    },
+    "283": {
+      "block": "main_tokenize_asset_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "285": {
+      "op": "!",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "286": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "287": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "289": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "290": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "292": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "1"
+      ]
+    },
+    "293": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "294": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ]
+    },
+    "295": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "297": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "298": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "299": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "300": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.tokenize_asset",
+      "op": "callsub tokenize_asset",
+      "stack_out": []
+    },
+    "303": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "304": {
+      "op": "return",
+      "stack_out": []
+    },
+    "305": {
+      "block": "main_create_application_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "307": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "308": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "309": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "311": {
+      "op": "!",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "312": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "313": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[1]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[1]%0#0"
+      ]
+    },
+    "316": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "317": {
+      "op": "txnas Assets",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "319": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "322": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "323": {
+      "callsub": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.create_application",
+      "op": "callsub create_application",
+      "stack_out": []
+    },
+    "326": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "327": {
+      "op": "return",
+      "stack_out": []
+    },
+    "328": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.create_application",
+      "params": {
+        "asset_id#0": "uint64",
+        "royalty_percent#0": "uint64"
+      },
+      "block": "create_application",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "331": {
+      "op": "bytec_0 // \"assetid\"",
+      "defined_out": [
+        "\"assetid\""
+      ],
+      "stack_out": [
+        "\"assetid\""
+      ]
+    },
+    "332": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"assetid\"",
+        "asset_id#0 (copy)"
+      ],
+      "stack_out": [
+        "\"assetid\"",
+        "asset_id#0 (copy)"
+      ]
+    },
+    "334": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "335": {
+      "op": "bytec_1 // \"creator_account\"",
+      "defined_out": [
+        "\"creator_account\""
+      ],
+      "stack_out": [
+        "\"creator_account\""
+      ]
+    },
+    "336": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"creator_account\"",
+        "new_state_value%0#0"
+      ],
+      "stack_out": [
+        "\"creator_account\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "338": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "339": {
+      "op": "bytec_3 // \"royalty_percent\"",
+      "defined_out": [
+        "\"royalty_percent\""
+      ],
+      "stack_out": [
+        "\"royalty_percent\""
+      ]
+    },
+    "340": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"royalty_percent\"",
+        "royalty_percent#0 (copy)"
+      ],
+      "stack_out": [
+        "\"royalty_percent\"",
+        "royalty_percent#0 (copy)"
+      ]
+    },
+    "342": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "343": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "344": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.tokenize_asset",
+      "params": {
+        "mbrpay#0": "uint64"
+      },
+      "block": "tokenize_asset",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "347": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "349": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "350": {
+      "op": "bytec_1 // \"creator_account\"",
+      "defined_out": [
+        "\"creator_account\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"creator_account\""
+      ]
+    },
+    "351": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "352": {
+      "error": "check self.creator_account exists",
+      "op": "assert // check self.creator_account exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "353": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "354": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "355": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "357": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#0",
+        "0"
+      ]
+    },
+    "358": {
+      "op": "bytec_0 // \"assetid\"",
+      "defined_out": [
+        "\"assetid\"",
+        "0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "0",
+        "\"assetid\""
+      ]
+    },
+    "359": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "360": {
+      "error": "check self.assetid exists",
+      "op": "assert // check self.assetid exists",
+      "stack_out": [
+        "tmp%2#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "361": {
+      "op": "asset_holding_get AssetBalance",
+      "defined_out": [
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "363": {
+      "op": "bury 1",
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "365": {
+      "op": "!",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "366": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "367": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "mbrpay#0 (copy)"
+      ],
+      "stack_out": [
+        "mbrpay#0 (copy)"
+      ]
+    },
+    "369": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "371": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%6#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "tmp%7#0"
+      ]
+    },
+    "373": {
+      "op": "==",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "374": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "375": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "mbrpay#0 (copy)"
+      ]
+    },
+    "377": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "379": {
+      "op": "global MinBalance",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0",
+        "tmp%10#0"
+      ]
+    },
+    "381": {
+      "op": "global AssetOptInMinBalance",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%11#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0",
+        "tmp%10#0",
+        "tmp%11#0"
+      ]
+    },
+    "383": {
+      "op": "+",
+      "defined_out": [
+        "tmp%12#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0",
+        "tmp%12#0"
+      ]
+    },
+    "384": {
+      "op": "==",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "385": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "386": {
+      "op": "itxn_begin"
+    },
+    "387": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "388": {
+      "op": "bytec_0 // \"assetid\"",
+      "stack_out": [
+        "0",
+        "\"assetid\""
+      ]
+    },
+    "389": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "390": {
+      "error": "check self.assetid exists",
+      "op": "assert // check self.assetid exists",
+      "stack_out": [
+        "maybe_value%2#0"
+      ]
+    },
+    "391": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
+      ]
+    },
+    "393": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "0"
+      ]
+    },
+    "394": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
+      ]
+    },
+    "396": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "maybe_value%2#0"
+      ]
+    },
+    "398": {
+      "op": "itxn_field XferAsset",
+      "stack_out": []
+    },
+    "400": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer"
+      ],
+      "stack_out": [
+        "axfer"
+      ]
+    },
+    "401": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "403": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "404": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "406": {
+      "op": "itxn_submit"
+    },
+    "407": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "408": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.buy_ip_fraction",
+      "params": {
+        "buyer_payment#0": "uint64",
+        "fraction_amount#0": "uint64"
+      },
+      "block": "buy_ip_fraction",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "411": {
+      "op": "bytec_2 // \"kyc_verified\"",
+      "defined_out": [
+        "\"kyc_verified\""
+      ],
+      "stack_out": [
+        "\"kyc_verified\""
+      ]
+    },
+    "412": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"kyc_verified\"",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "\"kyc_verified\"",
+        "tmp%0#0"
+      ]
+    },
+    "414": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "415": {
+      "op": "box_get",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "416": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "417": {
+      "op": "btoi",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value_converted%0#0"
+      ],
+      "stack_out": [
+        "maybe_exists%0#0",
+        "maybe_value_converted%0#0"
+      ]
+    },
+    "418": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "maybe_exists%0#0",
+        "maybe_value_converted%0#0"
+      ],
+      "stack_out": [
+        "maybe_exists%0#0",
+        "maybe_value_converted%0#0",
+        "0"
+      ]
+    },
+    "419": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%0#0",
+        "0",
+        "maybe_value_converted%0#0"
+      ]
+    },
+    "420": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0",
+        "maybe_value_converted%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "422": {
+      "op": "select",
+      "defined_out": [
+        "state_get%0#0"
+      ],
+      "stack_out": [
+        "state_get%0#0"
+      ]
+    },
+    "423": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "424": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "buyer_payment#0 (copy)"
+      ],
+      "stack_out": [
+        "buyer_payment#0 (copy)"
+      ]
+    },
+    "426": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "428": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%2#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "tmp%3#0"
+      ]
+    },
+    "430": {
+      "op": "==",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "431": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "432": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "buyer_payment#0 (copy)"
+      ]
+    },
+    "434": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "436": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "437": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "fraction_amount#0 (copy)"
+      ],
+      "stack_out": [
+        "fraction_amount#0 (copy)"
+      ]
+    },
+    "439": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "440": {
+      "op": "itxn_begin"
+    },
+    "441": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "442": {
+      "op": "bytec_0 // \"assetid\"",
+      "defined_out": [
+        "\"assetid\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"assetid\""
+      ]
+    },
+    "443": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "444": {
+      "error": "check self.assetid exists",
+      "op": "assert // check self.assetid exists",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "445": {
+      "op": "txn Sender",
+      "defined_out": [
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
+      ]
+    },
+    "447": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maybe_value%1#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "fraction_amount#0 (copy)"
+      ]
+    },
+    "449": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "maybe_value%1#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
+      ]
+    },
+    "451": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "453": {
+      "op": "itxn_field XferAsset",
+      "stack_out": []
+    },
+    "455": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer"
+      ],
+      "stack_out": [
+        "axfer"
+      ]
+    },
+    "456": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "458": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "459": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "461": {
+      "op": "itxn_submit"
+    },
+    "462": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "463": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.atomic_swap",
+      "params": {
+        "buyer#0": "bytes",
+        "seller#0": "bytes",
+        "amount#0": "uint64"
+      },
+      "block": "atomic_swap",
+      "stack_in": [],
+      "op": "proto 3 0"
+    },
+    "466": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "467": {
+      "op": "bytec_0 // \"assetid\"",
+      "defined_out": [
+        "\"assetid\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"assetid\""
+      ]
+    },
+    "468": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "469": {
+      "error": "check self.assetid exists",
+      "op": "assert // check self.assetid exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "470": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "471": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "473": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "474": {
+      "op": "bytec_2 // \"kyc_verified\"",
+      "defined_out": [
+        "\"kyc_verified\""
+      ],
+      "stack_out": [
+        "\"kyc_verified\""
+      ]
+    },
+    "475": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "\"kyc_verified\"",
+        "buyer#0 (copy)"
+      ],
+      "stack_out": [
+        "\"kyc_verified\"",
+        "buyer#0 (copy)"
+      ]
+    },
+    "477": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "478": {
+      "op": "box_get",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "479": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "480": {
+      "op": "btoi",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value_converted%0#0"
+      ],
+      "stack_out": [
+        "maybe_exists%1#0",
+        "maybe_value_converted%0#0"
+      ]
+    },
+    "481": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_exists%1#0",
+        "maybe_value_converted%0#0",
+        "0"
+      ]
+    },
+    "482": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%1#0",
+        "0",
+        "maybe_value_converted%0#0"
+      ]
+    },
+    "483": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0",
+        "maybe_value_converted%0#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "485": {
+      "op": "select",
+      "defined_out": [
+        "state_get%0#0"
+      ],
+      "stack_out": [
+        "state_get%0#0"
+      ]
+    },
+    "486": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "487": {
+      "op": "bytec_2 // \"kyc_verified\"",
+      "stack_out": [
+        "\"kyc_verified\""
+      ]
+    },
+    "488": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"kyc_verified\"",
+        "seller#0 (copy)"
+      ],
+      "stack_out": [
+        "\"kyc_verified\"",
+        "seller#0 (copy)"
+      ]
+    },
+    "490": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "491": {
+      "op": "box_get",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "492": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "493": {
+      "op": "btoi",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value_converted%1#0"
+      ],
+      "stack_out": [
+        "maybe_exists%2#0",
+        "maybe_value_converted%1#0"
+      ]
+    },
+    "494": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_exists%2#0",
+        "maybe_value_converted%1#0",
+        "0"
+      ]
+    },
+    "495": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%2#0",
+        "0",
+        "maybe_value_converted%1#0"
+      ]
+    },
+    "496": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0",
+        "maybe_value_converted%1#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "498": {
+      "op": "select",
+      "defined_out": [
+        "state_get%1#0"
+      ],
+      "stack_out": [
+        "state_get%1#0"
+      ]
+    },
+    "499": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "500": {
+      "op": "itxn_begin"
+    },
+    "501": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "502": {
+      "op": "bytec_0 // \"assetid\"",
+      "stack_out": [
+        "0",
+        "\"assetid\""
+      ]
+    },
+    "503": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "504": {
+      "error": "check self.assetid exists",
+      "op": "assert // check self.assetid exists",
+      "stack_out": [
+        "maybe_value%3#0"
+      ]
+    },
+    "505": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "maybe_value%3#0",
+        "seller#0 (copy)"
+      ]
+    },
+    "507": {
+      "op": "itxn_field Sender",
+      "stack_out": [
+        "maybe_value%3#0"
+      ]
+    },
+    "509": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maybe_value%3#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "511": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "maybe_value%3#0"
+      ]
+    },
+    "513": {
+      "op": "frame_dig -3",
+      "stack_out": [
+        "maybe_value%3#0",
+        "buyer#0 (copy)"
+      ]
+    },
+    "515": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "maybe_value%3#0"
+      ]
+    },
+    "517": {
+      "op": "itxn_field XferAsset",
+      "stack_out": []
+    },
+    "519": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer"
+      ],
+      "stack_out": [
+        "axfer"
+      ]
+    },
+    "520": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "522": {
+      "op": "intc_3 // 1000",
+      "defined_out": [
+        "1000"
+      ],
+      "stack_out": [
+        "1000"
+      ]
+    },
+    "523": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "525": {
+      "op": "itxn_submit"
+    },
+    "526": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "527": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.verify_kyc",
+      "params": {
+        "user#0": "bytes",
+        "is_verified#0": "uint64"
+      },
+      "block": "verify_kyc",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "530": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "532": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "533": {
+      "op": "bytec_1 // \"creator_account\"",
+      "defined_out": [
+        "\"creator_account\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"creator_account\""
+      ]
+    },
+    "534": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "535": {
+      "error": "check self.creator_account exists",
+      "op": "assert // check self.creator_account exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "536": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "537": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "538": {
+      "op": "bytec_2 // \"kyc_verified\"",
+      "defined_out": [
+        "\"kyc_verified\""
+      ],
+      "stack_out": [
+        "\"kyc_verified\""
+      ]
+    },
+    "539": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"kyc_verified\"",
+        "user#0 (copy)"
+      ],
+      "stack_out": [
+        "\"kyc_verified\"",
+        "user#0 (copy)"
+      ]
+    },
+    "541": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "542": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "is_verified#0 (copy)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "is_verified#0 (copy)"
+      ]
+    },
+    "544": {
+      "op": "itob",
+      "defined_out": [
+        "new_box_value%0#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "new_box_value%0#0"
+      ]
+    },
+    "545": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "546": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "547": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.revoke_kyc",
+      "params": {
+        "user#0": "bytes"
+      },
+      "block": "revoke_kyc",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "550": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "552": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "553": {
+      "op": "bytec_1 // \"creator_account\"",
+      "defined_out": [
+        "\"creator_account\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"creator_account\""
+      ]
+    },
+    "554": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "555": {
+      "error": "check self.creator_account exists",
+      "op": "assert // check self.creator_account exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "556": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "557": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "558": {
+      "op": "bytec_2 // \"kyc_verified\"",
+      "defined_out": [
+        "\"kyc_verified\""
+      ],
+      "stack_out": [
+        "\"kyc_verified\""
+      ]
+    },
+    "559": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"kyc_verified\"",
+        "user#0 (copy)"
+      ],
+      "stack_out": [
+        "\"kyc_verified\"",
+        "user#0 (copy)"
+      ]
+    },
+    "561": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "562": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#0",
+        "0"
+      ]
+    },
+    "563": {
+      "op": "itob",
+      "defined_out": [
+        "new_box_value%0#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "new_box_value%0#0"
+      ]
+    },
+    "564": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "565": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "566": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.distribute_royalty",
+      "params": {
+        "usage_payment#0": "uint64"
+      },
+      "block": "distribute_royalty",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "569": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "usage_payment#0 (copy)"
+      ],
+      "stack_out": [
+        "usage_payment#0 (copy)"
+      ]
+    },
+    "571": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "573": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "575": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "576": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "577": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "usage_payment#0 (copy)"
+      ]
+    },
+    "579": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "581": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%3#0",
+        "tmp%3#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "tmp%3#0 (copy)"
+      ]
+    },
+    "582": {
+      "op": "assert",
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "583": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "0"
+      ]
+    },
+    "584": {
+      "op": "bytec_3 // \"royalty_percent\"",
+      "defined_out": [
+        "\"royalty_percent\"",
+        "0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "0",
+        "\"royalty_percent\""
+      ]
+    },
+    "585": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "586": {
+      "error": "check self.royalty_percent exists",
+      "op": "assert // check self.royalty_percent exists",
+      "stack_out": [
+        "tmp%3#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "587": {
+      "op": "*",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "588": {
+      "op": "pushint 100 // 100",
+      "defined_out": [
+        "100",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "100"
+      ]
+    },
+    "590": {
+      "op": "/",
+      "defined_out": [
+        "royalty_fee#0"
+      ],
+      "stack_out": [
+        "royalty_fee#0"
+      ]
+    },
+    "591": {
+      "op": "itxn_begin"
+    },
+    "592": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "royalty_fee#0",
+        "0"
+      ]
+    },
+    "593": {
+      "op": "bytec_1 // \"creator_account\"",
+      "defined_out": [
+        "\"creator_account\"",
+        "0",
+        "royalty_fee#0"
+      ],
+      "stack_out": [
+        "royalty_fee#0",
+        "0",
+        "\"creator_account\""
+      ]
+    },
+    "594": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "royalty_fee#0"
+      ],
+      "stack_out": [
+        "royalty_fee#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "595": {
+      "error": "check self.creator_account exists",
+      "op": "assert // check self.creator_account exists",
+      "stack_out": [
+        "royalty_fee#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "596": {
+      "op": "itxn_field Receiver"
+    },
+    "598": {
+      "op": "itxn_field Amount",
+      "stack_out": []
+    },
+    "600": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "pay"
+      ],
+      "stack_out": [
+        "pay"
+      ]
+    },
+    "601": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "603": {
+      "op": "intc_3 // 1000",
+      "defined_out": [
+        "1000"
+      ],
+      "stack_out": [
+        "1000"
+      ]
+    },
+    "604": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "606": {
+      "op": "itxn_submit"
+    },
+    "607": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "608": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.connect_wallet",
+      "params": {},
+      "block": "connect_wallet",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "610": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "612": {
+      "op": "!=",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "613": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "614": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "615": {
+      "subroutine": "smart_contracts.ip_tokens.contract.IPTokenizationPlatform.delete_application",
+      "params": {},
+      "block": "delete_application",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "617": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "618": {
+      "op": "bytec_1 // \"creator_account\"",
+      "defined_out": [
+        "\"creator_account\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"creator_account\""
+      ]
+    },
+    "619": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "620": {
+      "error": "check self.creator_account exists",
+      "op": "assert // check self.creator_account exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "621": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "622": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "623": {
+      "op": "itxn_begin"
+    },
+    "624": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "625": {
+      "op": "bytec_0 // \"assetid\"",
+      "defined_out": [
+        "\"assetid\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"assetid\""
+      ]
+    },
+    "626": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "627": {
+      "error": "check self.assetid exists",
+      "op": "assert // check self.assetid exists",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "628": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%1#0",
+        "0"
+      ]
+    },
+    "629": {
+      "op": "bytec_1 // \"creator_account\"",
+      "stack_out": [
+        "maybe_value%1#0",
+        "0",
+        "\"creator_account\""
+      ]
+    },
+    "630": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "631": {
+      "error": "check self.creator_account exists",
+      "op": "assert // check self.creator_account exists",
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "632": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "0"
+      ]
+    },
+    "633": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "635": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "637": {
+      "op": "itxn_field XferAsset",
+      "stack_out": []
+    },
+    "639": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer"
+      ],
+      "stack_out": [
+        "axfer"
+      ]
+    },
+    "640": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "642": {
+      "op": "intc_3 // 1000",
+      "defined_out": [
+        "1000"
+      ],
+      "stack_out": [
+        "1000"
+      ]
+    },
+    "643": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "645": {
+      "op": "itxn_submit"
+    },
+    "646": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
